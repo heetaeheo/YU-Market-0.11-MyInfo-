@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_home"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/baseBackGround">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/baseBackGround"
+                    android:src="@drawable/account"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:hint="NickName"
+                    android:textColor="@color/baseTextColor"
+                    android:textSize="20sp" />
+
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/right_image"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:layout_marginEnd="0dp"-->
+                <!--                    android:adjustViewBounds="true"-->
+                <!--                    android:scaleType="fitCenter"-->
+                <!--                    android:src="@drawable/right" />-->
+
+                //1월 10일부터 qr로 변경 진행중
+                <!--                <ImageButton-->
+                <!--                    android:id="@+id/qr_btn"-->
+                <!--                    android:layout_width="80dp"-->
+                <!--                    android:layout_height="80dp"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:layout_marginEnd="0dp"-->
+                <!--                    android:backgroundTint="@color/white"-->
+                <!--                    android:drawableTint="@color/black"-->
+                <!--                    android:src="@drawable/qr_icon" />-->
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/like_Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/baseBackGround"
+                        android:drawableBottom="@drawable/love_image"
+                        android:text="찜 목록"
+                        android:textColor="@color/baseTextColor" />
+
+                    <Button
+                        android:id="@+id/order_list_Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/baseBackGround"
+                        android:drawableBottom="@drawable/list"
+                        android:text="주문 목록"
+                        android:textColor="@color/baseTextColor" />
+
+                    <Button
+                        android:id="@+id/review_Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/baseBackGround"
+                        android:drawableBottom="@drawable/message"
+                        android:text="리뷰/문의 관리"
+                        android:textColor="@color/baseTextColor" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3sp"
+                    android:layout_weight="0.1"
+                    />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="계정"
+                    android:textColor="@color/baseTextColor"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/baseBackGround"
+                    android:text="닉네임 설정"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="@color/baseTextColor"/>
+
+                <Button
+                    android:id="@+id/profile_image_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/baseBackGround"
+                    android:text="프로필 변경"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="@color/baseTextColor" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/baseBackGround"
+                    android:text="미정"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="@color/baseTextColor" />
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3sp"
+                    android:layout_weight="0.1" />
+
+                  <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="앱 설정"
+                    android:textColor="@color/baseTextColor"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <Switch
+                    android:id="@+id/dark_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/baseBackGround"
+                    android:layout_marginLeft="20dp"
+                    android:text="다크 모드"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="@color/baseTextColor" />
+
+                  </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3sp"
+                    android:layout_weight="0.1"
+                    android:background="@color/baseBackGround"
+                    />
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이용 안내"
+                        android:textColor="@color/baseTextColor"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp" />
+
+
+                    <Button
+                        android:id="@+id/memoBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/baseBackGround"
+                        android:drawableLeft="@drawable/info_2"
+                        android:text="공지사항"
+                        android:gravity="center_vertical"
+                        android:textSize="15dp"
+                        android:textColor="@color/baseTextColor"/>
+
+                    <Button
+                    android:id="@+id/mypostBtn"
+                    android:drawableLeft="@drawable/taskicon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/baseBackGround"
+                    android:text="약관"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="@color/baseTextColor" />
+
+            </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
